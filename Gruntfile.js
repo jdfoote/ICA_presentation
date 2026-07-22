@@ -1,6 +1,6 @@
 /* global module:false */
-var sass = require('sass');
 module.exports = function(grunt) {
+	var sass = require('sass');
 	var port = grunt.option('port') || 8000;
 	var root = grunt.option('root') || '.';
 
