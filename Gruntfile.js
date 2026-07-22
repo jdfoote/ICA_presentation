@@ -1,4 +1,5 @@
 /* global module:false */
+var sass = require('sass');
 module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
 	var root = grunt.option('root') || '.';
@@ -34,6 +35,9 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
+			options: {
+				implementation: sass
+			},
 			core: {
 				files: {
 					'css/reveal.css': 'css/reveal.scss',
@@ -49,12 +53,6 @@ module.exports = function(grunt) {
 						ext: '.css'
 					}
 				]
-			}
-		},
-
-		autoprefixer: {
-			dist: {
-				src: 'css/reveal.css'
 			}
 		},
 
@@ -145,12 +143,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		retire: {
-			js: ['js/reveal.js', 'lib/js/*.js', 'plugin/**/*.js'],
-			node: ['.'],
-			options: {}
-		}
-
 	});
 
 	// Dependencies
@@ -161,9 +153,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
-	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
-	grunt.loadNpmTasks( 'grunt-retire' );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
@@ -175,10 +165,10 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'css-themes', [ 'sass:themes' ] );
 
 	// Core framework CSS
-	grunt.registerTask( 'css-core', [ 'sass:core', 'autoprefixer', 'cssmin' ] );
+	grunt.registerTask( 'css-core', [ 'sass:core', 'cssmin' ] );
 
 	// All CSS
-	grunt.registerTask( 'css', [ 'sass', 'autoprefixer', 'cssmin' ] );
+	grunt.registerTask( 'css', [ 'sass', 'cssmin' ] );
 
 	// Package presentation to archive
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );
