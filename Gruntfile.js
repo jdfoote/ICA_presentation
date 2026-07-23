@@ -160,6 +160,7 @@ module.exports = function(grunt) {
 
 		this.files.forEach( function( file ) {
 			if( file.src.length === 0 ) {
+				grunt.log.warn( 'No Sass source files found for "' + file.dest + '".' );
 				return;
 			}
 
