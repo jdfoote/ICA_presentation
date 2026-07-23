@@ -70,13 +70,14 @@ module.exports = function(grunt) {
 				eqeqeq: true,
 				immed: true,
 				esnext: true,
-				latedef: true,
+				latedef: 'nofunc',
 				newcap: true,
 				noarg: true,
 				sub: true,
 				undef: true,
 				eqnull: true,
 				browser: true,
+				node: true,
 				expr: true,
 				globals: {
 					head: false,
@@ -151,9 +152,23 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-zip' );
+
+	grunt.registerMultiTask( 'sass', 'Compile Sass files with Dart Sass.', function() {
+		var implementation = this.options().implementation || sass;
+
+		this.files.forEach( function( file ) {
+			if( file.src.length === 0 ) {
+				grunt.log.warn( 'No Sass source files found for "' + file.dest + '".' );
+				return;
+			}
+
+			var result = implementation.compile( file.src[0] );
+			grunt.file.write( file.dest, result.css );
+			grunt.log.writeln( 'File "' + file.dest + '" created.' );
+		} );
+	} );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
