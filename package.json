@@ -9,7 +9,7 @@
     "test": "grunt test",
     "start": "grunt serve",
     "build": "grunt",
-    "audit": "npm audit --audit-level=moderate"
+    "audit": "npm audit --omit=dev --audit-level=moderate"
   },
   "author": {
     "name": "Hakim El Hattab",
