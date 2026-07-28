@@ -259,14 +259,14 @@ body {
 }
 
 .reveal a:hover {
-  color: rgb(54.5816072908%, 48.5169842585%, 41.104667219%);
+  color: rgb(139.1830985915, 123.7183098592, 104.8169014085);
   text-shadow: none;
   border: none;
 }
 
 .reveal .roll span:after {
   color: #fff;
-  background: rgb(14.652029826%, 13.024026512%, 11.0342446838%);
+  background: rgb(37.3626760563, 33.2112676056, 28.1373239437);
 }
 
 /*********************************************
@@ -320,19 +320,19 @@ body {
 }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: rgb(54.5816072908%, 48.5169842585%, 41.104667219%);
+  border-right-color: rgb(139.1830985915, 123.7183098592, 104.8169014085);
 }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: rgb(54.5816072908%, 48.5169842585%, 41.104667219%);
+  border-left-color: rgb(139.1830985915, 123.7183098592, 104.8169014085);
 }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: rgb(54.5816072908%, 48.5169842585%, 41.104667219%);
+  border-bottom-color: rgb(139.1830985915, 123.7183098592, 104.8169014085);
 }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: rgb(54.5816072908%, 48.5169842585%, 41.104667219%);
+  border-top-color: rgb(139.1830985915, 123.7183098592, 104.8169014085);
 }
 
 /*********************************************
