@@ -256,14 +256,14 @@ body {
 }
 
 .reveal a:hover {
-  color: rgb(243.4263959391, 215.4568527919, 171.5736040609);
+  color: rgb(95.4613317408%, 84.4928834478%, 67.2837662984%);
   text-shadow: none;
   border: none;
 }
 
 .reveal .roll span:after {
   color: #fff;
-  background: rgb(207.6878172589, 138.0583756345, 28.8121827411);
+  background: rgb(81.4462028466%, 54.1405394645%, 11.2988951926%);
 }
 
 /*********************************************
@@ -317,19 +317,19 @@ body {
 }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: rgb(243.4263959391, 215.4568527919, 171.5736040609);
+  border-right-color: rgb(95.4613317408%, 84.4928834478%, 67.2837662984%);
 }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: rgb(243.4263959391, 215.4568527919, 171.5736040609);
+  border-left-color: rgb(95.4613317408%, 84.4928834478%, 67.2837662984%);
 }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: rgb(243.4263959391, 215.4568527919, 171.5736040609);
+  border-bottom-color: rgb(95.4613317408%, 84.4928834478%, 67.2837662984%);
 }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: rgb(243.4263959391, 215.4568527919, 171.5736040609);
+  border-top-color: rgb(95.4613317408%, 84.4928834478%, 67.2837662984%);
 }
 
 /*********************************************
